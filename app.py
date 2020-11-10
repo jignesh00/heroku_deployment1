@@ -5,14 +5,14 @@ import pickle
 
 
 
-app1 = Flask(__name__)
+app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
-@app1.route('/')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@app1.route('/predict', methods = ['POST'])
+@app.route('/predict', methods = ['POST'])
 def predict():
     #for rendering result on flask
     
@@ -23,8 +23,8 @@ def predict():
     
     output = round(prediction[0],2)
     print(output)
-    return render_template('index.html', prediction_text = 'Employee Salary should be ${}'.format(output))
+    return render_template('index.html', prediction_text = 'Employee Salary for {} should be ${}'.format(final_features,output))
 
 
 if __name__ == "__main__":
-    app1.run(debug=True)
+    app.run(debug=True)

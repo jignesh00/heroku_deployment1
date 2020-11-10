@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<h2> test head </h2>
+  
+</head>
 
-<html>
-<head> Test head </head>
-
-<body> 
+<body>
     <div class = 'login'>
         <h1> Predict Salary Analysis</h1>
         
@@ -15,14 +18,13 @@
            <input type = "text" name="test_score" placeholder"Test Score" required="required" />
            <input type = "text" name="interview_score" placeholder"Interview Score" required="required" />
            
-           <button type = 'submit' class='btn btn-primary'>Predict</button>
-       </form>
-       
-       
-       <br>
-       <br>
-       {{ predict_text }}    
-      </div>
-         
+           <button type = 'submit' class='btn btn-primary btn-block btn-large"'>Predict</button>
+       </form> 
+        <br>
+        <br>
+            {{ prediction_text }}
+
+    </div>
+
 </body>
-<html>
+</html>
