@@ -1,0 +1,6 @@
+1. train our model
+2. create we app using flask
+3. commit the code in github
+4. create an account in heroku(paas)
+5. link the github to heroku
+6. Deploy the model

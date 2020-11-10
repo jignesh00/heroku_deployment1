@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head> Test head </head>
+
+<body> 
+    <div class = 'login'>
+        <h1> Predict Salary Analysis</h1>
+        
+        <!--- here we give main input for recieving query to our ml --->
+        
+        <form action= "{{url_for('predict')}}"method="post">
+       
+           <input type = "text" name="experience" placeholder"Experience" required="required" />
+           <input type = "text" name="test_score" placeholder"Test Score" required="required" />
+           <input type = "text" name="interview_score" placeholder"Interview Score" required="required" />
+           
+           <button type = 'submit' class='btn btn-primary'>Predict</button>
+       </form>
+       
+       
+       <br>
+       <br>
+       {{ predict_text }}    
+      </div>
+         
+</body>
+<html>
