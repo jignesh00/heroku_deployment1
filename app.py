@@ -17,8 +17,9 @@ def predict():
     #for rendering result on flask
     
     int_features = [int(x) for x in request.form.values()]
+    print(int_features)
     final_features = [np.array(int_features)]
-    
+
     prediction = model.predict(final_features)
     
     output = round(prediction[0],2)
